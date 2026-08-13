@@ -1,26 +1,34 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   color: #222;
 }
 
+
+/* HEADER */
+
 header {
-  background-color: white;
+  background-color: #9180ad;
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: none;
 }
 
 header h1 {
   max-width: 1100px;
   margin: 0 auto;
+  color: #111;
 }
+
+
+/* MAIN */
 
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
+
 
 /* SUMMARY */
 
@@ -32,10 +40,22 @@ main {
 }
 
 .summary-card {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+}
+
+.summary-card:nth-child(1) {
+  background-color: #acd5dc;
+}
+
+.summary-card:nth-child(2) {
+  background-color: #f0ede9;
+}
+
+.summary-card:nth-child(3) {
+  background-color: #c9c0ff;
 }
 
 .summary-card h2 {
@@ -43,37 +63,88 @@ main {
   font-size: 1rem;
 }
 
+.summary-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+
 /* FORM */
 
+.form-section {
+  background-color: #f0ede9;
+  padding: 1.5rem;
+  border-radius: 22px;
+  margin-bottom: 2rem;
+}
+
+.form-section h2 {
+  margin-top: 0;
+}
+
 #record-form {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 #record-form label {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-weight: bold;
 }
 
 input,
-select,
-button {
+select {
   padding: 0.75rem;
   font-size: 1rem;
+
+  background-color: #ffffff;
+
+  border: 2px solid #222;
+
+  border-radius: 18px;
+
+  box-sizing: border-box;
 }
 
-button {
-  cursor: pointer;
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #9180ad;
 }
+
+
+/* BUTTON */
+
+button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background-color: #9180ad;
+  color: white;
+
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #776792;
+}
+
 
 /* FILTERS */
 
@@ -83,49 +154,120 @@ button {
   margin-bottom: 1.5rem;
 }
 
-/* RECORD LIST */
+.record-controls select,
+.record-controls input {
+  border: 2px solid #9180ad;
+  background-color: white;
+}
+
+
+/* RECORD LIST SECTION */
+
+.records-section {
+  background-color: #acd5dc;
+
+  padding: 1.5rem;
+
+  border-radius: 16px;
+
+  margin-bottom: 2rem;
+}
+
+.records-section h2 {
+  margin-top: 0;
+}
+
+
+/* INDIVIDUAL RECORD */
 
 .record {
   background-color: white;
+
   padding: 1rem;
+
   margin-bottom: 0.75rem;
+
   border-radius: 10px;
-  border: 1px solid #ddd;
+
+  border: none;
 
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   gap: 1rem;
 }
 
+
+/* INCOME / EXPENSE COLORS */
+
 .record.income .record-amount {
-  color: green;
+  color: #3f8f73;
 }
 
 .record.expense .record-amount {
-  color: red;
+  color: #d06767;
 }
+
+
+/* ACTION BUTTONS */
 
 .record-actions {
   display: flex;
   gap: 0.5rem;
 }
 
-/* CATEGORY BREAKDOWN */
+.edit-button {
+  background-color: #c9c0ff;
+  color: #111;
+}
 
-#category-breakdown {
+.delete-button {
+  background-color: #f4b6b6;
+  color: #111;
+}
+
+
+/* CATEGORY SECTION */
+
+.category-section {
+  background-color: #acd5dc;
+
+  padding: 1.5rem;
+
+  border-radius: 16px;
+
+  margin-bottom: 2rem;
+}
+
+.category-section h2 {
+  margin-top: 0;
+}
+
+#category-summary {
   background-color: white;
+
   padding: 1rem;
+
   border-radius: 10px;
-  border: 1px solid #ddd;
 }
 
 .category-row {
   display: flex;
+
   justify-content: space-between;
+
   padding: 0.5rem 0;
+
   border-bottom: 1px solid #eee;
 }
+
+.category-row:last-child {
+  border-bottom: none;
+}
+
 
 /* MOBILE */
 
